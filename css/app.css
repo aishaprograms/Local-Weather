@@ -1,0 +1,36 @@
+body {
+    background-image: url('../img/nasa.jpg');
+    background-size: cover;
+    font-family: 'Eczar', serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+}
+
+.container {
+    text-align: center;
+    margin: auto;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 400px;
+    /*
+    *  Where the magic happens
+    *  Centering method from CSS Tricks
+    *  http://css-tricks.com/centering-percentage-widthheight-elements/
+    */
+    transform: perspective(1px) translate(-50%, -50%);
+    -webkit-transform: perspective(1px) translate(-50%, -50%);
+    -o-transform: perspective(1px) translate(-50%, -50%);
+    -ms-transform: perspective(1px) translate(-50%, -50%);
+}

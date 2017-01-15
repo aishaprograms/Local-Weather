@@ -7,22 +7,23 @@ function getLocation() {
 }
 
 function getWeather(position) {
-    var query = '?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude;
+    var query = '?lat=' + position.coords.latitude + '&lon=' +
+        position.coords.longitude;
     // API Key
     var APIKey = '41e58cef7150f773438a28a98fe5aa79';
 
     //the URL to query the database
-    var queryURL = 'http://api.openweathermap.org/data/2.5/weather' + query + '&units=imperial&appid=' + APIKey;
+    var queryURL = 'http://api.openweathermap.org/data/2.5/weather' + query +
+        '&units=imperial&appid=' + APIKey;
 
     $.ajax({ url: queryURL, method: 'GET' })
 
     .done(function(response) {
-
-        // Log the resulting object
         console.log(response);
+        $('.loc-name').text(response.name);
+        $('.loc-temp').text(response.main.temp + ' °F');
+        $('.loc-condition').text(response.weather[0].description);
 
-        // Log the data in the console as well
-        console.log("Temperature (F): " + response.main.temp);
     });
 }
 
