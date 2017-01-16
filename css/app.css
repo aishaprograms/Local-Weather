@@ -15,6 +15,15 @@ h6 {
 
 h1 {
     font-family: 'Pacifico', cursive;
+    font-size: xx-large;
+}
+
+h3 {
+    font-size: x-large;
+}
+
+i {
+    color: white;
 }
 
 .container {
