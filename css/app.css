@@ -15,11 +15,11 @@ h6 {
 
 h1 {
     font-family: 'Pacifico', cursive;
-    font-size: xx-large;
+    font-size: 72px;
 }
 
 h3 {
-    font-size: x-large;
+    font-size: 36px;
 }
 
 i {
@@ -32,7 +32,7 @@ i {
     left: 50%;
     position: absolute;
     top: 50%;
-    width: 400px;
+    width: 680px;
     /*
     *  Where the magic happens
     *  Centering method from CSS Tricks
