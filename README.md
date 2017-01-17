@@ -17,8 +17,8 @@ If your browser prompts you, allow Geolocation to detect your location. The brow
 
 * **Aisha Ahmad** - [Aisha Ahmad](https://github.com/aishaprograms)
 
-## Heroku App
-* **Local Weather App** - [Local Weather App](https://sleepy-brook-22230.herokuapp.com/)
+## App
+* **Local Weather App** - [Local Weather App]()
 
 ## Inspired By
 Freecodecamp challenge
