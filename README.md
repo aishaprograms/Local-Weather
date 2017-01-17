@@ -17,9 +17,6 @@ If your browser prompts you, allow Geolocation to detect your location. The brow
 
 * **Aisha Ahmad** - [Aisha Ahmad](https://github.com/aishaprograms)
 
-## App
-* **Local Weather App** - [Local Weather App]()
-
 ## Inspired By
 Freecodecamp challenge
 #100DaysofCode
