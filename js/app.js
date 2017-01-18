@@ -48,7 +48,7 @@ function getWeather(position) {
     var APIKey = '41e58cef7150f773438a28a98fe5aa79';
 
     //the URL to query the database
-    var queryURL = 'https://api.openweathermap.org/data/2.5/weather' + query +
+    var queryURL = 'http://api.openweathermap.org/data/2.5/weather' + query +
         '&units=metric&appid=' + APIKey;
 
     $.ajax({ url: queryURL, method: 'GET' }).done(function(response) {
