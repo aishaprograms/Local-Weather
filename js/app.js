@@ -41,31 +41,29 @@ function addWeatherIcon(description) {
     return locIcon;
 }
 
-function getWeather(position) {
-    var query = '?lat=' + position.coords.latitude + '&lon=' +
-        position.coords.longitude;
-    // API Key
-    var APIKey = '41e58cef7150f773438a28a98fe5aa79';
-
-    //the URL to query the database
-    var queryURL = 'http://api.openweathermap.org/data/2.5/weather' + query +
-        '&units=metric&appid=' + APIKey;
-
-    $.ajax({ url: queryURL, method: 'GET' }).done(function(response) {
-        $('.loc-name').text(response.name);
-        var Fah = convertCtoF(response.main.temp);
-        $('.loc-temp').text(response.main.temp + ' °C / ' + Fah + ' °F');
-        $('.loc-condition').text(response.weather[0].description);
-        var locIcon = addWeatherIcon(response.weather[0].description);
-        $('.loc-icon').html(locIcon);
+function getWeather() {
+    var city;
+    var ipURL = 'http://ipinfo.io';
+    $.getJSON({ url: ipURL }).done(function(response) {
+        city = response.postal + ',' + response.country;
+    }).then(function() {
+        // API Key
+        var APIKey = '41e58cef7150f773438a28a98fe5aa79';
+        //the URL to query the database
+        var queryURL = 'http://api.openweathermap.org/data/2.5/weather?q=' + city +
+            '&units=metric&appid=' + APIKey;
+        $.ajax({
+            url: queryURL,
+            method: 'GET'
+        }).done(function(response) {
+            $('.loc-name').text(response.name);
+            var Fah = convertCtoF(response.main.temp);
+            $('.loc-temp').text(response.main.temp + ' °C / ' + Fah + ' °F');
+            $('.loc-condition').text(response.weather[0].description);
+            var locIcon = addWeatherIcon(response.weather[0].description);
+            $('.loc-icon').html(locIcon);
+        });
     });
 }
 
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(getWeather);
-    } else {
-        console.log('Geolocation is not supported by this browser.');
-    }
-}
-getLocation();
+getWeather();
