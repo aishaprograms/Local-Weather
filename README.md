@@ -3,8 +3,9 @@ This app shows the weather in the user's location.
 
 ## Technology used
 - Open Weather API
-- HTML5 Geolocation
-
+- HTML5 Geolocation (originally, removed)
+- ipinfo.io (updated)
+- weather-icons CSS by Erik Flowers
 
 ## Getting Started
 If your browser prompts you, allow Geolocation to detect your location. The browser takes a couple seconds to get your location and load it into the AJAX call to the Open Weather API.
@@ -12,6 +13,9 @@ If your browser prompts you, allow Geolocation to detect your location. The brow
 ## Built With
 
 * SublimeText
+
+## Codepen.io
+* **Local Weather** - [Local Weather](http://codepen.io/aishaprograms/full/OWmjvq/)
 
 ## Author
 
